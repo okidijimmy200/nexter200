@@ -1,0 +1,51 @@
+.container {
+    background-color: #eee;
+    width: 1000px;
+    margin: 30px auto;
+
+    /* to display content as a grid */
+    display: grid;
+    /* to display grid rows and columns */
+    /* we want the elements to be divided in 2 columns and 3 rows */
+    /* defining the height of our rows */
+    grid-template-rows: 150px 150px;
+
+    /* defing grid columns and their heights */
+    grid-template-columns: 150px 150px 150px;
+
+    /* creating space btn the row gutter */
+    grid-row-gap: 30px;
+    /* creating space btn the vertical gutter */
+    grid-column-gap: 30px;
+
+    /* if you want to have the same gap for column and row */
+    /* grid-gap: 30px; */
+
+}
+
+.item {
+    padding: 20px;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: white;
+}
+
+.item--1{
+    background-color: orangered;
+}
+.item--2{
+    background-color: yellowgreen;
+}
+.item--3{
+    background-color: blueviolet;
+}
+.item--4{
+    background-color: palevioletred;
+}
+.item--5{
+    background-color: royalblue;
+}
+.item--6{
+    background-color: goldenrod;
+}
+

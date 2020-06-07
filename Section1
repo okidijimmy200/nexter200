@@ -1,0 +1,79 @@
+INTRODUCTION TO CSS GRIDS
+-Css grid is a modern grid layout tht brings a two dimensional grid system to Css
+for the first time
+-Css grid replaces float layouts using less and more readable and logical css and html
+-We can design more complex layouts
+-Css grids works perfectly with with flexbox wch handles one dimensional layout and 
+-these solve alot of our layout problems
+-With Css grids, there is no need for bootstrap
+
+
+CSS GRID TERMINOLOGY:
+display: grid to use grid
+-direct children are items
+-row-axis---x-direction
+-column-axis---y-direction
+
+GRID Lines:
+lines tht separates the columns and rows and they are automatically numbered
+
+-We do have a gutter wch is the space btn the rows and columns
+-the space btn 2 grid lines is called a truck whether horizontal or vertical
+-the area btn 2 horizontal and vertical lines is called a grid area
+-if tht area is btn 2 adjustsent grid lines and 2 adjustemnt column lines, then its called
+a grid cell
+
+CSS GRID PROPERTY OVERVIEW
+
+CONTAINER
+1:
+-grid-template-rows     ----
+-grid-template-columns  ---- gird template
+-grid-template-areas    -----
+
+
+2:
+-grid-row-gap    ------ 
+                        |  grid-gap
+-grid-column-gap ------
+
+3:
+-justify-items
+-align-items
+-justify-content
+-align-content
+
+
+4:
+-grid-auto-rows
+-grid-auto-columns
+-grid-auto-flow
+
+
+ITEMS:
+1:
+grid-row-start---
+                | grid-row    -------------
+grid-row-end----                           |
+                                                grid-area
+grid-column-start ---                      |
+                    | grid-column ---------
+grid-column-end-----
+
+
+2:
+justify-content
+-align-self
+
+3:
+order
+
+
+Lecture 2:
+Creating our first grid
+-in grid template, we define the height of our rows
+
+Lecture 3:
+Getting famiiar with Fr
+-Fractional unit in css
+-we cld also do better by not defining the rows one by one
