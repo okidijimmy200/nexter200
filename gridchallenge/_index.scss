@@ -5,11 +5,12 @@
 
     display: grid;
     // --placing grid tracks with 2 cols and 2 rows
-    grid-template-rows: 150px 150px;
+    // grid-template-rows: 150px 150px;
     // --or
     // grid-template-rows: repeat(2 , 150px);
     // --cols with same width occupying all container
-    grid-template-columns: repeat(2, 1fr);
+    // --commenting it out to use it in aligning tracks
+    // grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
 
     // --designing the implicit grids to give them a height of 80px and the explicit grid has 150px
@@ -19,14 +20,15 @@
     // --to make it col, we set it to col
     // grid-auto-flow: column;
     // --seting it back to row
-    grid-auto-flow: row;
+    // --dense is used to fill the auto cols spaces
+    grid-auto-flow: row dense;
 
     // --styling the implict cols
     grid-auto-columns: .5fr;
 
     // --aligning items to an area
     // --this aligns items in the center vertically in the row area
-    align-items: center;
+    // align-items: center;
 
     // --align items is by default set to stretch
     // align-items: stretch;
@@ -34,12 +36,20 @@
     // align-items: start;
 
     // --this aligns items along the col axis
-    justify-items:center;
+    // justify-items:center;
     // justify-items:start;
     // justify-items:end;
     // --defaaultis stretch
 
-    
+    // --Aligning grid tracks to grid containers
+    grid-template-rows: repeat(2, 100px);
+    grid-template-columns: repeat(2, 200px);
+    height: 1000px;
+
+    // --align tracks inside the container
+    justify-content: center; // start, end, stretch, space-between, space-around, space-evenly
+    // --aligning content to the center
+    align-content: center;
 
 
 
@@ -55,8 +65,13 @@
             // --start on grid row 2 and span across 3 row track
             grid-row: 2/ span 3;
             // --align self overides align-items for individual item
-            align-self: start; //end, center
-            justify-self: start;
+            // align-self: start; //end, center
+            // justify-self: start;
+        }
+
+        &--6 {
+            background-color: lightcoral;
+            grid-row: 2 / span 2;
         }
 
         &--7 {

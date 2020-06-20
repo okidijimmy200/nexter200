@@ -36,3 +36,9 @@ the rows and cols shd be stated
 Lecture 4:
 Aligning GRID items
 -we will learn different ways of aligning grid items to grid areas
+
+Lecture 5:
+Aligning tracks
+-how do we align entire grid tracks to our grid area
+-dense keyword is used to fillup the holes created
+-this is good for situations like image gallery
