@@ -1,0 +1,38 @@
+Lecture 1:
+Naming Grid lines
+-how to position grid items on the grid by using the automatically generated
+grid line numbers
+-we use square brackets and place the name of the line
+
+-we use grid line names in professional layout
+
+Lecture 2:
+Naming Grid areas
+-we can name the entire ares
+-for grid area, we write a couple of strings and give each grid cell a name
+-if we make an error in our representation, it will not work at all
+-if we want to place an empty cell, we put a dot
+
+-grid areas is good for small layouts
+
+Lecture 3:
+Implicit vs Explicit Grids
+-we will do another small project to implement Implicit and Explicit concepts
+-the four grids displayed in index are the explicit grids bse we explicitly defined how
+the rows and cols shd be stated
+-if we have more grid items and we have space,Css automatically adds more tracks to the grid
+-we see tht we have and, grid, is, great section added to our grid yet we placed 2 rows
+-so the rows we didnot define but we placed are caled implicit grids
+
+-so how abt if we want to style the implicit grids?
+-we can do tht using a property called grid-auto-rows
+-the explict area is covered by solid lines while the implicit is not covered by solid lines
+
+-why are implicit section added as rows and not as cols
+-this is bse the grid-auto-flow is by default row
+
+--this implict is important when we dont knw how many rows or cols we will have in our layout
+
+Lecture 4:
+Aligning GRID items
+-we will learn different ways of aligning grid items to grid areas

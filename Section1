@@ -77,3 +77,29 @@ Lecture 3:
 Getting famiiar with Fr
 -Fractional unit in css
 -we cld also do better by not defining the rows one by one
+-we use the repeat function and the number of rows we want
+-we do the same for column
+
+-if we wan the 3rd column with 300px not 150px
+*********repeat(2, 150px) 300px;
+
+-how do we make a column fill up the rest of remaining space
+-to do this ,we use the Fractional unit
+
+-if we want the columns to be of the same size, we use repeat(number of columns, 1fr)
+-the 50% in column doesnot take into consideration the gap we put
+fr also works on rows
+
+Lecture 4:
+Positioning Grid items
+-how to position items anywhere we want on the grid
+-the default layout is the source layout
+-if we want to place the columns in differnet places
+-how do we place grid item 1 into cell 5
+
+Lecture 5:
+Spanning grid items
+-ie if you want the violet to span over the entire area
+we give it the specification of number of grid wch is 4
+
+-we can have multiple grid items in the same cell

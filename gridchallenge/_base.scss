@@ -1,0 +1,146 @@
+//// Method 1
+// .challenge {
+//     width: 1000px;
+//     margin: 30px auto;
+//     display: grid;
+//     //-- styling the different rows for header, footer
+//     grid-template-rows: 100px 200px 400px 100px;
+//     // --styling the different cols
+//     grid-template-columns: repeat(3 , 1fr) 200px;
+//     // creating the gap
+//     grid-gap: 30px;s
+
+//     // --selecting the direct children of challenge
+//     & > * {
+//         background-color: orangered;
+//         padding: 20px;
+//         color: #fff;
+//         font-size: 30px;
+//         font-family: sans-serif;
+//     }
+
+//     // --making the header span the entire div
+//     .header {
+//         grid-column: 1 / -1;
+//     }
+
+//     // --positioning the sidebar and spanning it
+//     .sidebar {
+//         grid-column: 4 /5;
+//         // --to place it in row 2
+//         grid-row: 2 /span 2;
+//     }
+
+//     // --making main content span 3 grid cols
+//     .main-content {
+//         grid-column: 1 / span 3;
+//     }
+
+//     // --positioning the footer
+//     .footer {
+//         grid-column: 1 / -1;
+//     }
+// }
+//// Method 2 line names
+// .challenge {
+//     width: 900px;
+//     margin: 30px auto;
+//     display: grid;
+//     //-- creating different line names    
+   
+//     grid-template-rows: [header-start] 100px [header-end box-start] 200px [box-end main-start] 400px [main-end footer-start] 100px [footer-end];
+//     // --styling the different cols
+//     // this is how we name lines in repeat
+//     grid-template-columns: repeat(3 ,[col-start] 1fr [col-end]) 200px [grid-end];
+//     // creating the gap
+//     grid-gap: 30px;
+
+//     // --selecting the direct children of challenge
+//     & > * {
+//         background-color: orangered;
+//         padding: 20px;
+//         color: #fff;
+//         font-size: 30px;
+//         font-family: sans-serif;
+//     }
+
+//     // --making the header span the entire div
+//     .header {
+//         // grid-column: 1 / -1;
+//         // --using line names
+//         grid-column:col-start 1 / grid-end;
+//     }
+
+//     // --implementing naming lines
+//     .sidebar {
+//         // grid-column: 4 /5;
+//         // --using line names
+//         grid-column: col-end 3 / grid-end;
+//         // --to place it in row 2
+//         grid-row: box-start / main-end;
+//     }
+
+//     // --making main content span 3 grid cols
+//     .main-content {
+//         // grid-column: 1 / span 3;
+//         // --using line names
+//         grid-column: col-start 1 / col-end 3;
+
+//     }
+
+//     // --positioning the footer
+//     .footer {
+//         // grid-column: 1 / -1;
+//         // --using name lines
+//         grid-column: col-start 1 / grid-end;
+//     }
+// }
+
+//// Method 1 naming grid areas
+.challenge {
+    width: 900px;
+    margin: 30px auto;
+    display: grid;
+    //-- styling the different rows for header, footer
+    grid-template-rows: 100px 200px 400px 100px;
+    // --styling the different cols
+    grid-template-columns: repeat(3 , 1fr) 200px;
+    // creating the gap
+    grid-gap: 30px;
+
+    // using grid template area property
+    // --there are four cells
+    grid-template-areas: "head head head head"
+                        "box box box side"
+                        "main main main side"
+                        "foot foot foot foot";
+
+    // --selecting the direct children of challenge
+    & > * {
+        background-color: orangered;
+        padding: 20px;
+        color: #fff;
+        font-size: 30px;
+        font-family: sans-serif;
+    }
+
+    // --using grid area
+    .header {
+        grid-area: head;
+    }
+
+    // --positioning the sidebar and spanning it
+    .sidebar {
+       grid-area: side;
+    }
+
+    // --making main content span 3 grid cols
+    .main-content {
+        grid-area: main;
+    }
+
+    // --positioning the footer
+    .footer {
+        grid-area: foot;
+    }
+}

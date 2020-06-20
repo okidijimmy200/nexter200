@@ -3,15 +3,30 @@
     width: 1000px;
     margin: 30px auto;
 
-    /* to display content as a grid */
+    /* ---to display content as a grid */
     display: grid;
-    /* to display grid rows and columns */
-    /* we want the elements to be divided in 2 columns and 3 rows */
-    /* defining the height of our rows */
-    grid-template-rows: 150px 150px;
+    /* ---to display grid rows and columns */
+    /* ---we want the elements to be divided in 2 columns and 3 rows */
+    /*--- defining the height of our rows */
+    /* we use the repeat function to define the number of rows */
+    grid-template-rows: repeat(2, 150px);
+    /* grid-template-rows: 150px 150px; */
 
-    /* defing grid columns and their heights */
-    grid-template-columns: 150px 150px 150px;
+    /*---------------- defing grid columns and their heights --------------*/
+    /* grid-template-columns: repeat(3,150px); */
+    /* grid-template-columns: repeat(2, 150px) 300px; */
+    /*------------------ to occupy the remaining space in the column -----------*/
+    /* grid-template-columns: repeat(2, 150px) 1fr; */
+    /* grid-template-columns: 150px 150px 150px; */
+
+
+    /* -------------more on fr------------------ */
+    /* ------------to get columns of the same size ----------------*/
+    grid-template-columns: repeat(3, 1fr);
+    /*---------- if we want the one in the middle double the size of the 2 ------------*/
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    /* --------using a column of 50%----------- */
+    /* grid-template-columns: 50% 2fr 1fr; */
 
     /* creating space btn the row gutter */
     grid-row-gap: 30px;
@@ -32,20 +47,56 @@
 
 .item--1{
     background-color: orangered;
+    /* ---we specify where we want the item to be placed in cell wch starts with  row 2 and ends with row 3---*/
+    /*grid-row-start: 2;
+    grid-row-end: 3;*/
+    /* ---placing item in column--- */
+    /*grid-column-start: 2;
+    grid-column-end: 3;*/
+
+    /* a shorter way of writing this showing where it starts and where it ends*/
+    grid-row: 2/3;
+    grid-column: 2/3;
+
+     /* ---incase we want to have orange on top  */
+     z-index: 10;
 }
 .item--2{
     background-color: yellowgreen;
+    /* another way of using span */
+    /* grid-column: 1/ span 2; */
+    /* --spanning to the end-- */
+    grid-column: 2 /-1;
 }
 .item--3{
     background-color: blueviolet;
+    /* making it span over 2 grids */
+    grid-column: 1 /3;
+    /* --when we declare this, the violet moves to new row bse
+    we explicitly defined the orange box earlier on, to change this, we need to explicitly define the row */
+    grid-row: 2/ 3;
+    /* the orange color then gets hidden in the viloet color, meaning we can have multiple grid items in the same cell */
+   
 }
 .item--4{
     background-color: palevioletred;
 }
 .item--5{
     background-color: royalblue;
+    /* placing element 5 in position top right corner */
+    /* grid-row: 1/2; */
+    /* we use the line grids above the cells to determine the row and column numbers */
+    /* grid-column: 3/4; */
+
+    /* another way of specifying this cld be */
+    grid-area: 1/3/3/4;
 }
 .item--6{
     background-color: goldenrod;
+    /* positioning in 2 */
+    grid-row: 1/2;
+    grid-column: 2/3;
+    /* spanning to include the entire space of grid */
+    /* grid-column: 2/4; */
 }
 
