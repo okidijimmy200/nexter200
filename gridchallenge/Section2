@@ -42,3 +42,17 @@ Aligning tracks
 -how do we align entire grid tracks to our grid area
 -dense keyword is used to fillup the holes created
 -this is good for situations like image gallery
+
+Lecture 6:
+Using min-content, max-content and the minimax()
+-we use another demo project
+max-content makes the grid have jst enough width to occupy the text
+-this also makes the col as wide as possible without causing any linebreaks
+-min-content takes the largest width it needs to take without overflowing
+-this is abit limiting and the text will not fit in the space
+-so make it work, we need to specify min-content in the rows too
+
+--minmax() function is something we pass 2 values in and css will make sure we the track will stay within these 2 values
+-so this gives us a define height of 150px bt incase the text is bigger, it automatically increases
+-so as we decrease the width of the screen, the box remains 200px as the minimum width
+-fractional unit fills up the remainin space bt its never smaller thn the min content set

@@ -21,6 +21,36 @@
   .challenge .footer {
     grid-area: foot; }
 
+.container--1 {
+  width: 90%;
+  margin: 30px auto;
+  background-color: #ddd;
+  display: grid;
+  grid-template-rows: repeat(2, minmax(min-content));
+  grid-template-columns: minmax(200px, 50%) repeat(3, 1fr); }
+  .container--1 .item {
+    padding: 20px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 30px;
+    background-color: orangered; }
+    .container--1 .item--1 {
+      background-color: orangered; }
+    .container--1 .item--2 {
+      background-color: yellowgreen; }
+    .container--1 .item--3 {
+      background-color: blueviolet; }
+    .container--1 .item--4 {
+      background-color: palevioletred; }
+    .container--1 .item--5 {
+      background-color: royalblue; }
+    .container--1 .item--6 {
+      background-color: goldenrod; }
+    .container--1 .item--7 {
+      background-color: crimson; }
+    .container--1 .item--8 {
+      background-color: darkslategrey; }
+
 .container {
   width: 900px;
   margin: 30px auto;
