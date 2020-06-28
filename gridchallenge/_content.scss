@@ -21,10 +21,23 @@
     // --when we use the above,the challenge is tht if text is alot, it will overflow
 
     // --so we need to use the minmax() function
-    grid-template-rows: repeat(2, minmax(min-content));
+    // grid-template-rows: repeat(2, minmax(min-content));
     // grid-template-columns: minmax(200px, 300px) repeat(3, 1fr);
     // --to implement 50% width gap, the col will remain 50% almost through out until it reaches 200px
-    grid-template-columns: minmax(200px, 50%) repeat(3, 1fr);
+    // grid-template-columns: minmax(200px, 50%) repeat(3, 1fr);
+
+
+    //---USING AUTO-FILL AND AUTO FIT
+    grid-template-rows: repeat(2, minmax(min-content));
+    // --how do we determin the number od cols automatically
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-template-columns: repeat(auto-fill, 90px);
+    // -- auto fit collapes the tracks to fit the given space col
+    // grid-template-columns: repeat(auto-fit, 90px);
+    // using auto-fit with min-max, this occupies our entire grid area
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    // --to give height
+    grid-auto-rows: 150px;
 
 
     .item {

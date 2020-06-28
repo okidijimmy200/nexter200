@@ -56,3 +56,14 @@ max-content makes the grid have jst enough width to occupy the text
 -so this gives us a define height of 150px bt incase the text is bigger, it automatically increases
 -so as we decrease the width of the screen, the box remains 200px as the minimum width
 -fractional unit fills up the remainin space bt its never smaller thn the min content set
+
+Lecture 7:
+Pesponsive Layouts with auto-fit and auto-fills
+-auto-fill creates many tracks with the desired width as can fit in the container
+-auto-fit collapes the tracks and gives it the width of 0
+-we can now use auto fit with min max function
+-for the min-content to work, the width must be placed in percentage
+--so when we minimise the screen, it shifts the last block to another row meaning we cant fit 8 cols there with 90px
+-so it now creates 7 cols
+--this is a naturaly responsive layout without writing media query
+min-content and auto-fit is very important for responsive layout
