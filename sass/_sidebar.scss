@@ -1,3 +1,7 @@
 .sidebar {
     background-color: $color-primary;
+    // --grid from sidebar start to end
+    grid-column: sidebar-start / sidebar-end;
+    // --to span from beginiing of design to the end
+    grid-row: 1 / -1;
 }

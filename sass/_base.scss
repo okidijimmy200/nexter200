@@ -46,5 +46,15 @@ body {
     // --for the realtors, we use 40vw bse its a prop ofthe width and not vh,
     // --4th,5th and 6th row sh have the height of its content
     grid-template-rows: 80vh min-content 40vw repeat(3,min-content); 
+    // --creating an 8 col layout, to create a fixed size,we use 1140px/8=140.2px bse we want 8 cols
+    // --we use the minmax function where the max is 14rem bt it cn be lower bt never below mincontent
+    // -adding the sidetrack of 8rem, we add 2 cols to fit the remaining space of 1fr
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8,[col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 
+    // --increasing the font-size:;
+
+    // & > * {
+    //     padding: 4rem;
+    //     font-size: 3rem;
+    // }
 }

@@ -1,3 +1,41 @@
 .features {
-    background-color: $color-grey-light-2;
+    grid-column: center-start / center-end;
+
+    margin: 15rem 0;
+
+    // --making feature grid container
+    display: grid;
+    // grid-template-columns: repeat(3 , 1fr);
+    // --to make it responsive
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    // ---we can creare a row bt its not necessary bse the row will be placed inimplicit grid
+    gap: 6rem;
+
+}
+
+.feature {
+
+    display: grid;
+    // --1st co contains icon
+    grid-template-columns: min-content 1fr; //no need to specify row
+    grid-row-gap:1.5rem;
+    grid-column-gap: 2.5rem;
+    // --aligning items to start to remove adjust text tht is shorter
+    align-items: start; //we have end, center
+    // --icon
+    &__icon{
+        fill: $color-primary;
+        width: 4.5rem;
+        height: 4.5rem;
+        // -1 means the end of the explicit grid lines bt we didnt define any grid rows
+        // grid-row: 1/ -1;, to make icon occupy entire col
+        grid-row: 1/ span 2; // we use span
+        // --centering icon to the top
+        transform: translateY(-1rem);
+        
+    }
+    // --text
+    &__text {
+        font-size: 1.7rem;
+    }
 }

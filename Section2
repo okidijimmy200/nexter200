@@ -5,3 +5,34 @@ BUILDING THE OVERALL LAYOUT
 -how to choose different row and col track sizes for different types of content
 
 --we then build the grid part of the container
+
+LECTURE 2:
+BUILDING THE OVERALL LAYOUT 2:
+-placing the grid items in cols
+-when we shrink the col, the fr space starts to shrink b4 any other space
+-we can have sections that span only 8 cols of space ie the story sections
+-then there are those tht span the 8 cols plus the remaining space and they are called full-blend
+layouts
+
+--on the header, we gave out 6 col to header main and 2 cols to realtors and 2 with fr for
+full bleed
+
+LECTURE 3:
+BUILDING THE FEATURES SECTION 1::
+-How and why to create grids inside of grids
+-How to create a responsive component without media quieries
+-How to build a small component using CSS grid
+
+-in the near future, we will have sub grids wch basicaally allows a grid inside a grid to snap its tracks
+to the parent grid ie align the cols be automatically where the cols of the overall page layout are
+
+LECTURE 4:
+BUILDING THE FEATURES SECTION 2:
+-we build the icons and size them up
+-we make the grids responsive without using responsive design
+
+LECTURE 5:
+BUILDING THE STORY SECTION 1:
+-how to deal with overlapping grid items
+-why images are special and behave differently than other grid items
+-how to decide if flexbox is a better tool in certain situations
