@@ -36,3 +36,50 @@ BUILDING THE STORY SECTION 1:
 -how to deal with overlapping grid items
 -why images are special and behave differently than other grid items
 -how to decide if flexbox is a better tool in certain situations
+
+
+LECTURE 6:
+BUILDING THE STORY SECTION 2:
+-we will create 6 cols for the images
+-images dont feel up their entire grid area like other divs bse of aspect ratio
+-we use align items
+
+LECTURE 7:
+BUILDING THE HOMES SECTION 1:
+-section containing the available HOMES
+-how to build a complex component using a mix of css grid propertes, overlapping and flexbox
+-we are going to layout the cards using css grids
+
+LECTURE 8:
+BUILDING THE HOMES SECTION 2:
+-we place the icons in 2 cols and the btn span the entire col
+-placing the heart icon at the top right corner,we use overlapping
+
+LECTURE 9:
+BUILDING THE GALLERY 1:
+-how to create a complex grid-looking gallery
+-Using object-fit together with images for grid items
+
+-we select the number of rows and the number of cols
+-how do we prevent an image from overflowing a cell
+-we use object fit property
+objectfit to cover is like setting background image to cover
+
+LECTURE 10:
+BUILDING THE GALLERY 2:
+we place the images in the given gallery location
+
+LECTURE 11:
+BUILDING THE FOOTER:
+-Apply concepts we learnt
+-its more natural to work with css grid for footer thn flex cooz we dont need to
+place the margin-right property
+
+LECTURE 12:
+BUILDING THE SIDEBAR:
+-placed the button for sidebar with a before and after pseudo classes and designed them
+
+LECTURE 13:
+BUILDING THE HEADER 1:
+-How to manage vertical spacing in a responsive layout using CSS grid techniques
+-how to use ::before and ::after as grid items

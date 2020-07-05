@@ -2,4 +2,46 @@
     background-color: $color-secondary;
     // --herewe implement full-bleed section
     grid-column: full-start / full-end;
+    padding: 8rem;
+}
+
+.nav {
+    list-style: none;
+
+    display: grid;
+    // --to implement responsiveness
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 2rem;
+    align-items: center; //placing items in the center
+    // --styling the link
+    &__link:link,
+    &__link:visited {
+        font-size: 1.2rem;
+        color: #fff;
+        text-decoration: none;
+        font-family: $font-display;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1.5rem;
+        // --to apply padding
+        display: block;
+        transition: all .2s;
+
+        
+    }
+
+    // --hovering effects
+    &__link:hover,
+    &__link:active {
+        // --to see the items, we change the backcolor slihtly
+        background-color: rgba(#fff, .05);
+        // --moving the box slightly up
+        transform: translateY(-3px);
+    }
+}
+.copyright {
+    font-size: 1.4rem;
+    color: $color-grey-light-2;
+    margin-top: 6rem;
+    text-align: center;
 }

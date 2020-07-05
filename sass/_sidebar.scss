@@ -4,4 +4,31 @@
     grid-column: sidebar-start / sidebar-end;
     // --to span from beginiing of design to the end
     grid-row: 1 / -1;
+    // --placing the content in the center
+    display: flex;
+    justify-content: center;
+}
+
+.nav-btn{
+    // --since its a btn, we get rid of border and border radius
+    border: none;
+    border-radius: 0;
+    background-color: #fff;
+    height: 2px;
+    width: 4.5rem;
+    margin-top: 4rem;
+
+    &::before,
+    &::after{
+        background-color: #fff;
+        height: 2px;
+        width: 4.5rem;
+        // --to make it visible
+        content: "";
+        display: block;
+    }
+
+    // --moving the befre up andthe after down
+    &::before { transform: translateY(-1.5rem);}
+    &::after{transform: translateY(1.5rem);}
 }

@@ -1,4 +1,94 @@
 .homes {
-    background-color: $color-secondary;
+    // background-color: $color-secondary;
     grid-column: center-start / center-end;
+    margin: 15rem 0;
+
+    display: grid;
+    // --grid-col with as many cols as fit the grid container to mke it responsive
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    // --define the gap btn row and cols
+    grid-gap: 7rem;
+}
+
+.home {
+    background-color: $color-grey-light-1;
+    display: grid;
+    // --dividing grid into 2
+    grid-template-columns: repeat(2, 1fr);
+    // creating sme bottom space
+    grid-row-gap: 3.5rem;
+
+    &__img {
+        width: 100%;
+        // --make the image span the entire col
+        grid-column: 1/ -1;
+        // --to make image be overlapped by likeico
+        grid-row: 1 / 2;
+        z-index: 1;
+    }
+
+    &__like{
+        // --placint the like icon in a particular position at top right cornerr
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+         // --change the color
+         fill: $color-primary;
+         height: 2.5rem;
+         width: 2.5rem;
+        //  --hiiger z-index
+         z-index: 2;
+        //  --aligning items inside grid to top-right
+        justify-self: end;
+
+    }
+
+    &__name{
+        grid-row: 1 /2;
+        // --make the name span the entire col
+        grid-column: 1/ -1;
+        z-index: 2;
+        font-family: $font-display;
+        font-size: 1.6rem;
+        text-align: center;
+        padding: 1.25rem;
+        background-color: $color-secondary;
+        color: #fff;
+        font-weight: 400;
+        // --width is 80%
+        width: 80%;
+        // --centering the content
+        justify-self: center;
+        // --align self to bottom vertically
+        align-self: end;
+        // --moving it slightly down
+        transform: translateY(50%);
+    }
+
+    &__location,
+    &__rooms{
+        margin-top: 2.5rem;
+    }
+
+    &__location,
+    &__rooms,
+    &__area,
+    &__price{
+        font-size: 1.5rem;
+        margin-left: 2rem;
+        // aligning content side by side
+        display: flex;
+        align-items: center;
+        svg{
+            // --change the color
+            fill: $color-primary;
+            height: 2rem;
+            width: 2rem;
+            margin-right: 1rem;
+        }
+
+    }
+    &__btn{
+        // --make the btn span the entire col
+        grid-column: 1/ -1;
+    }
 }
