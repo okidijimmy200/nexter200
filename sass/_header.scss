@@ -34,11 +34,36 @@
     }
 
     &__seenon-text{
+        display: grid;
+        // --defining our cols, 1fr on the right and left, then text in the middle  
+        grid-template-columns: 1fr max-content 1fr;
+        // --space btn
+        grid-column-gap: 1.5rem;
+        align-items: center; //vertically align items
+        font-size: 1.6rem;
+        color: $color-grey-light-2;
 
+        &::before,
+        &::after {
+            content: "";
+            height: 1px;
+            display: block;
+            // --we use the current color variable
+            background-color: currentColor;
+        }
     }
     &__seenon-logos{
+        display: grid;
+        // --4 sized cols
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 3rem;
+
+        // --centering content inside grid items
+        justify-items: center;
         img{
             height: 2.5rem;
+            // --making image logo abit darkter
+            filter: brightness(70%)
         }
     }
 }

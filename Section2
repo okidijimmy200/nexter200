@@ -83,3 +83,13 @@ LECTURE 13:
 BUILDING THE HEADER 1:
 -How to manage vertical spacing in a responsive layout using CSS grid techniques
 -how to use ::before and ::after as grid items
+
+LECTURE 14:
+BUILDING THE HEADER 2:
+-working on as seen part
+-we will use grid to layout
+--the seenon text can be the parent element and the actual text the child
+-pseudo classees can also be grid items
+-the line before is a before psudo and the one after is an after pseudo
+
+
