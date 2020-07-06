@@ -13,6 +13,11 @@
     // --center heading
     justify-items: center;
 
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / -1;
+        
+    }
+
     &__list {
         // --placing images in grid
         display: grid;
@@ -20,6 +25,16 @@
         grid-column-gap: 2rem;
         grid-row-gap: 5vh; //important for large screen readjsutments
         align-items: center;
+        // --placing griditems side by side
+        @media only screen and (max-width: $bp-medium) {
+            // --we want an image then text, then image then text
+            grid-template-columns: repeat(3, min-content max-content);
+            
+        }
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: min-content max-content;
+            
+        }
     }
 
     &__img {

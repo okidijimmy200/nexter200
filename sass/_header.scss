@@ -24,6 +24,15 @@
     // --placing grid track inside grid container
     justify-content: center;
 
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / -1;
+        
+    }
+    @media only screen and (max-width: $bp-small) {
+        padding: 5rem;
+        
+    }
+
     &__logo{
         height: 3rem;
         // --placing the logo in the center

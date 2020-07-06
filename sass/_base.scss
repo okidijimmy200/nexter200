@@ -17,7 +17,8 @@ $font-display: 'Josefin Sans', sans-serif;
 /////////////RESPONSIVE BREAKPOINTS//////
 $bp-largest: 75em; // 1200px
 $bp-large: 62.5em; //1000px
-
+$bp-medium:50em; // 800px
+$bp-small:37.5em; //600px
 
 //////GLOBAL RESETS/////////
 *,
@@ -69,8 +70,17 @@ body {
     // --when responsive, change the grid layout
     @media only screen and (max-width: $bp-large) {
         // 1rem = 8px for bp-large so 8*6
-        grid-template-rows: 6rem 80vh min-content 40vw repeat(3,min-content); 
+        grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content); 
         // --we add a new row and remove the 1st col
         grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8,[col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    }
+    // --when responsive, change the grid layout
+    @media only screen and (max-width: $bp-medium) {
+        // --placing the realtors section below the header
+        // --header shd fillup the entire viewport, calc to make viewport be 100
+        // grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content 40vw repeat(3, min-content); 
+        // --the rest of the rows will be size based on the implicit content
+        grid-template-rows: 6rem calc(100vh - 6rem) 
+        
     }
 }
