@@ -107,3 +107,8 @@ in the header
 LECTURE 17:
 WRITING MEDIA QUERIES  2:
 -we put the realtors below the header
+
+LECTURE 18:
+BROWSER SUPPORT FOR CSS GRID
+-progressive enhancement:
+we build css for old browsers and also one for css grid

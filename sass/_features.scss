@@ -2,7 +2,7 @@
     grid-column: center-start / center-end;
 
     margin: 15rem 0;
-
+    @supports(display: grid) {
     // --making feature grid container
     display: grid;
     // grid-template-columns: repeat(3 , 1fr);
@@ -10,11 +10,19 @@
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     // ---we can creare a row bt its not necessary bse the row will be placed inimplicit grid
     gap: 6rem;
-
+    }
 }
 
 .feature {
 
+    float: left;
+    width: 33.3333%;
+    margin-bottom: 6rem;
+
+    @supports(display: grid) {
+        width: auto;
+        margin-bottom: 0;
+    }
     display: grid;
     // --1st co contains icon
     grid-template-columns: min-content 1fr; //no need to specify row
