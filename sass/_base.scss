@@ -14,6 +14,10 @@ $colot-grey-dark-2: #6D5D48;
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
+/////////////RESPONSIVE BREAKPOINTS//////
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; //1000px
+
 
 //////GLOBAL RESETS/////////
 *,
@@ -28,6 +32,10 @@ $font-display: 'Josefin Sans', sans-serif;
 html {
     box-sizing: border-box;
     font-size: 62.5%;  // 10px/16px = 62.5%
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
 }
 
 
@@ -57,4 +65,12 @@ body {
     //     padding: 4rem;
     //     font-size: 3rem;
     // }
+
+    // --when responsive, change the grid layout
+    @media only screen and (max-width: $bp-large) {
+        // 1rem = 8px for bp-large so 8*6
+        grid-template-rows: 6rem 80vh min-content 40vw repeat(3,min-content); 
+        // --we add a new row and remove the 1st col
+        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8,[col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    }
 }

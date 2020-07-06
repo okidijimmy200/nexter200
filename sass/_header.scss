@@ -5,6 +5,7 @@
     // NB: the best way to create an overlay is to move from the same color to the same rgba color
     background-image: linear-gradient(rgba($color-secondary, .93), rgba($color-secondary, .93)),
     url(../images/hero.jpeg);
+    background-size: cover;
     background-position: center;
     padding: 8rem;
     padding-top: 4rem;
@@ -12,9 +13,10 @@
     display: grid;
     // --we can use 1fr to fill up the available space in rows jst like with cols
     // --sizing the new row according to content and the next 6rem
-    grid-template-rows: 1fr min-content 6rem 1fr; //push the other text to the bottom
+    // --to handle the overflowing property,we use minmax
+    grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr; //push the other text to the bottom
     // --make the col have only the minwidth of content
-    grid-template-columns: max-content;
+    grid-template-columns: minmax(min-content, max-content); //minmax makes the col never less than the content in responsiv
     
     // --placing grid-row gap to create space
     grid-row-gap: 1.5rem;
@@ -60,10 +62,15 @@
 
         // --centering content inside grid items
         justify-items: center;
+        // --aligning items on responsive
+        align-items: center;
         img{
-            height: 2.5rem;
+            max-height: 2.5rem;
+            // --to make it responsive(the height can be 2.5rem or less)
+            max-width:100%;
             // --making image logo abit darkter
-            filter: brightness(70%)
+            filter: brightness(70%);
+            
         }
     }
 }
